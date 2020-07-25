@@ -1,0 +1,81 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onload="getLoggedInUser()">
+    <div class="navbar">
+        <div id="logo" title="Főoldal">
+            <img src="/imgs/trans.png" alt="logo" />
+        </div>
+
+        <div id="home-buttonnav" class="left-buttons">
+            <button onclick="showHome()">Home</button>
+        </div>
+        <div id="movies-buttonnav" class="left-buttons">
+            <button onclick="movies()">Movies</button>
+        </div>
+        <div id="myMovies-buttonnav" class="left-buttons">
+            <button onclick="myMovies()">My Movies</button>
+        </div>
+        <div id="subscriptions-buttonnav" class="left-buttons">
+            <button onclick="subscriptions()">Subscriptions</button>
+        </div>
+        <div id="register-buttonnav" class="left-buttons">
+            <button onclick="showRegister()">Register</button>
+        </div>
+        <div id="login-buttonnav" class="left-buttons">
+            <button onclick="showLogin()">Login</button>
+        </div>
+        <div id="newfilm-buttonnav" class="left-buttons">
+            <button onclick="showNewfilm()">New film</button>
+        </div>
+        <div id="logout-buttonnav" class="left-buttons">
+            <button onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+
+    <div class="register-table">
+        <p id="register-title">Register</p><br>
+        <p id="failed-register">failed</p>
+        <input placeholder="User name" type="text" id="user-name"> <p class="required-username">Required!</p><br><br>
+        <input placeholder="Password" type="password" id="user-pass"><p class="required-password">Required!</p><br>
+        <button onclick="register()" id="register-button">Register</button>
+    </div>
+    <div class="login-table">
+        <p id="login-title">Login</p><br>
+        <p id="failed-login">failed</p>
+        <input placeholder="User name" type="text" id="loginuser-name"><p class="required-username-login">Required!</p><br><br>
+        <input placeholder="Password" type="password" id="loginuser-pass"><p class="required-password-login">Required!</p><br>
+        <button onclick="login()" id="login-button">Login</button>
+    </div>
+    <div class="newfilm-table">
+        <p id="newfilm-title">New Film</p><br>
+        <input placeholder="Movie Title" type="text" id="movie-title"><p class="required-title">Required!</p><br><br>
+        <input placeholder="Movie rating" type="text" id="movie-rating"><p class="required-rating">Required and it must be a float!</p><br>
+        <textarea placeholder="Movie desc" id="movie-desc" rows="4"></textarea><p class="required-desc">Required!</p><br><br>
+        <button onclick="newfilm()" id="insert-movie">Add new movie</button>
+    </div>
+    <div class="movie-list">
+        <ul id="row"></ul>
+    </div>
+    <div class="mymovie-list">
+        <ul id="myrow"></ul>
+    </div>
+    <div class="submovie-list">
+        <ul id="submovierow"></ul>
+    </div>
+    <div id="sub-list" class="sub-list">
+        <ul id="subrow"></ul>
+    </div>
+
+
+
+    <div id="home-title"> You have just visited the MovieMarker singlepage app</div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+﻿
+@font-face {
+    font-family: 'azonixregular';
+    src: url('/azonix-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: azonixregular;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    display: initial;
+    font-size: 16px;
+    font-family:azonixregular;
+}
+
+
+.navbar {
+    position:fixed;
+    top:0;
+    width: 100%;
+    overflow: hidden;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /*border: solid;
+    border-width: 2px;*/
+    background-color: black;
+    font-size: 16px;
+    text-align: center;
+    font-family:azonixregular;
+}
+
+
+
+.navbar > :nth-child(3) {
+    margin-right: auto;
+}
+
+#logo {
+    width: 64px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.left-buttons {
+    width: 150px;
+    height: 30px;
+    margin-left:20px;
+    margin-top: 2px;
+    background: none;
+    background-color:black;
+    border: 4px solid;
+    color:orange;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    border-color:black;
+    position: relative;
+}
+
+
+.left-buttons::before, .left-buttons::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: black;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+
+.left-buttons::before {
+    top: -4px;
+    left: 10%;
+}
+
+.left-buttons::after {
+    bottom: -4px;
+    right: 10%;
+}
+
+.left-buttons:hover::before {
+    left: 80%;
+    background-color:orange;
+}
+
+.left-buttons:hover::after {
+    right: 80%;
+    background-color: orange;
+}
+
+#logout-buttonnav {
+    display: none;
+}
+
+
+.register-table {
+    display: none;
+    position: absolute;
+    align-items: center;
+    width: 800px;
+    height: 550px;
+    margin-top: 130px;
+    margin-left: calc(50% - 400px);
+    border: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.login-table {
+    display: none;
+    position: absolute;
+    align-items: center;
+    width: 800px;
+    height: 550px;
+    margin-top: 130px;
+    margin-left: calc(50% - 400px);
+    border: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+
+
+#user-name{
+    margin-top: 160px
+}
+
+#user-pass{
+    margin-bottom:20px;
+}
+
+#loginuser-name {
+    margin-top: 160px
+}
+
+#loginuser-pass {
+    margin-bottom: 20px;
+}
+
+#myMovies-buttonnav{
+    display:none;
+}
+
+#subscriptions-buttonnav{
+    display:none;
+}
+
+#newfilm-buttonnav{
+    display: none;
+}
+
+#failed-register {
+    display: none;
+    position: absolute;
+    top: 150px;
+    margin-left: calc(50% - 110px);
+    color: red;
+    text-align: center;
+    width: 220px;
+}
+
+#failed-login {
+    display: none;
+    position: absolute;
+    top: 150px;
+    margin-left: calc(50% - 110px);
+    color: red;
+    text-align: center;
+    width: 220px;
+}
+
+#register-button {
+    width: 22%;
+    height: 10%;
+    font-size:12px;
+}
+
+#login-button {
+    width: 22%;
+    height: 10%;
+    font-size: 12px;
+}
+
+#home-title {
+    text-align:center;
+    font-size: 30px;
+    margin-top:150px;
+}
+
+
+.required-username {
+    top: 210px;
+    position: absolute;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red
+}
+
+.required-password {
+    position: absolute;
+    top: 250px;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red
+}
+
+.required-username-login {
+    top: 210px;
+    position: absolute;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red
+}
+
+.required-password-login {
+    position: absolute;
+    top: 250px;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red
+}
+
+.newfilm-table {
+    display: none;
+    position: absolute;
+    align-items: center;
+    width: 800px;
+    height: 550px;
+    margin-top: 130px;
+    margin-left: calc(50% - 400px);
+    border: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#insert-movie {
+    width: 22%;
+    height: 10%;
+    font-size: 12px;
+}
+
+#movie-title {
+    margin-top: 160px;
+}
+
+#movie-rating{
+    margin-top:-11px;
+}
+
+#movie-desc {
+    margin-top: 5px;
+    width: 176px;
+}
+
+.required-title {
+    top: 210px;
+    position: absolute;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red
+}
+
+.required-rating {
+    top: 245px;
+    position: absolute;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red;
+    font-size:12px;
+}
+
+.required-desc {
+    top: 263px;
+    position: absolute;
+    margin-left: calc(50% + 110px);
+    display: none;
+    color: red;
+
+}
+
+.movie-list{
+    margin-top:80px;
+    display:none;
+}
+
+.mymovie-list {
+    margin-top: 80px;
+    display: none;
+}
+
+.submovie-list {
+    margin-top: 80px;
+    display: none;
+}
+
+.element {
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 13px;
+}
+
+
+
+ul#row {
+    list-style-type: none;
+    background-color: black;
+    padding: 6px;
+    border-radius: 13px;
+    display:none;
+    font-size: 14px;
+}
+
+ul#myrow {
+    list-style-type: none;
+    background-color: black;
+    padding: 6px;
+    border-radius: 13px;
+    display: none;
+}
+
+ul#subrow {
+    list-style-type: none;
+    background-color: black;
+    padding: 6px;
+    border-radius: 13px;
+    display: none;
+}
+
+ul#submovierow {
+    list-style-type: none;
+    background-color: black;
+    padding: 6px;
+    border-radius: 13px;
+    display: none;
+}
+
+
+.addbuttons{
+    width:120px;
+    height:30px;
+    float:right;
+}
+
+.myelement{
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 13px;
+}
+
+.subelements {
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 13px;
+}
+
+.showsubbuttons {
+    width: 110px;
+    height: 30px;
+    float: right;
+}
+
+.deletebuttons {
+    width: 160px;
+    height: 30px;
+    float: right;
+}
+
+.subelement {
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 13px;
+}
+
+.sub-list {
+    margin-top: 80px;
+    display: none;
+}
+
